@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="img/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body id="body">
+    <div class="container margin">
+        <h1 class="text-center ">REGISTRATION</h1><br>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="name" class="">Username:</label>
+                <input type="text" required="required" class="form-control" placeholder="e.g.   manalliaquat" id="name">
+            </div>
+            <div class="col-md-6">
+                <label for="number" class="">Number</label>
+                <input type="number" placeholder="e.g.  03100000000" id="number" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="password" class="">Password:</label>
+                <input type="password" required="required" placeholder="**********" id="password" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="">Email:</label>
+                <input type="email" required="required" placeholder="e.g.   m.manalliaquat@gmail.com" class="form-control" id="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary mb-2" onclick="submit();"><i class="fa fa-database"></i> SignUp</button>
+            </div>
+            <div class="col-xs-6">
+                <label for="" class="text-light">Already register?</label>
+                <button class="btn btn-success mb-2" onclick="window.location='login.html'"><i class="fa fa-sign-in"></i> Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/registration.js"></script>
+</body>
+
+</html>
