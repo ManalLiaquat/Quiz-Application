@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Application</title>
+    <link rel="shortcut icon" href="img/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body id="body" class="container">
+
+    <div class="container margin">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 id="userProfile" class="text-left"></h1>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-danger pull-right" onclick="window.location.replace('login.html')"><i class="fa fa-sign-out"></i> Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/js-logo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">JavaScript Quiz</h5>
+                    <p class="card-text">Test your skills of JavaScript by taking this small quiz.</p>
+                    <button href="" class="btn btn-primary" onclick="window.location.replace('quiz.html'); quizTimer();"><i class=" fa fa-paper-plane"></i> Start Quiz</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/html-logo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">HTML5 Quiz</h5>
+                    <p class="card-text">Test your skills of HTML5 by taking this small quiz. (comming soon)</p>
+                    <button href="" class="btn btn-primary" disabled onclick="window.location.replace('quiz.html'); quizTimer();"><i class=" fa fa-paper-plane"></i> Start Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/css-logo.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">CSS3 Quiz</h5>
+                    <p class="card-text">Test your skills of CSS3 by taking this small quiz. (comming soon)</p>
+                    <button href="" class="btn btn-primary" disabled onclick="window.location.replace('quiz.html'); quizTimer();"><i class=" fa fa-paper-plane"></i> Start Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+    <script src="js/registration.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
