@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Quiz</title>
+    <link rel="shortcut icon" href="img/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body class="row" id="body">
+    <div class="col-md-12">
+        <div class="col" id="content">
+            <div id="quizContainer">
+                <div class="modal-header">
+                    <h5>
+                        <i class="fa fa-question-circle"></i>
+                        <span> </span>
+                        <span class="label label-warning" id="question"></span>
+                    </h5>
+                    <h5 id="timer"></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="quiz" id="quiz" data-toggle="buttons">
+                        <label class="btn btn-lg btn-info btn-block">
+                            <span class="btn-label">
+                                <input type="radio" name="option" value="1" onchange="func1();">
+                                <br>
+                                <i class="fa fa-arrow-right"></i>
+                            </span>
+                            <span id="option1"></span>
+                        </label>
+                        <label class="btn btn-lg btn-info btn-block">
+                            <span class="btn-label">
+                                <input type="radio" name="option" value="2" onchange="func1();">
+                                <br>
+                                <i class="fa fa-arrow-right"></i>
+                            </span>
+                            <span id="option2"></span>
+                        </label>
+                        <label class="btn btn-lg btn-info btn-block">
+                            <span class="btn-label">
+                                <input type="radio" name="option" value="3" onchange="func1();">
+                                <br>
+                                <i class="fa fa-arrow-right"></i>
+                            </span>
+                            <span id="option3"></span>
+                        </label>
+                        <label class="btn btn-lg btn-info btn-block">
+                            <span class="btn-label">
+                                <input type="radio" name="option" value="4" onchange="func1();">
+                                <br>
+                                <i class="fa fa-arrow-right"></i>
+                            </span>
+                            <span id="option4"></span>
+                        </label>
+                        <button onclick="next()" class="btn btn-success pull-right" disabled id="nextButton">
+                            <i class="fa fa-angle-double-right"></i> Next Question</button>
+                            <span id="ans"></span>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div id="resultContainer" style="display:none;">
+                <div class="modal-header">
+                    <h3 class="" id="score"></h3>
+                    <button class="btn btn-secondary" onclick="window.location.replace('profile.html')">
+                        <i class="fa fa-undo"></i> Retake Quiz
+                    </button>
+                </div>
+                <p class="badge badge-warning text-center">My IDs</p><br>
+                <a href="https://github.com/ManalLiaquat/" class="badge badge-secondary text-center" target="_blank"><h3><i class="fa fa-github"></i></h3></a>
+                <a href="https://www.linkedin.com/in/manal-liaquat-621684156/" class="badge badge-info text-center" target="_blank"><h3><i class="fa fa-linkedin"></i></h3></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
