@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <link rel="shortcut icon" href="img/m.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body id="body">
+    <div class="container margin" id="login">
+        <h1 class="text-center">LOG IN</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="email" class="">Email:</label>
+                <input type="email" required="required" placeholder="e.g.   m.manalliaquat@gmail.com" class="form-control" id="userEmail">
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="">Password:</label>
+                <input type="password" required="required" placeholder="**********" id="userPassword" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success" onclick="login();"><i class="fa fa-sign-in"></i> Login</button>
+            </div>
+            <div class="col-xs-6">
+                <label for="" class="">New Member?</label>
+                <button class="btn btn-info" onclick="window.location='index.html'"><i class="fa fa-database"></i> SignUp</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="js/registration.js"></script>
+</body>
+
+</html>
