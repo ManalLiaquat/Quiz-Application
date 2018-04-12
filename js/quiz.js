@@ -64,11 +64,11 @@ var questions = [
     {
 
         "question": "Object properties are separated by?",
-        "option1": "semicolon ;",
-        "option2": "colon :",
-        "option3": "dot .",
-        "option4": "comma ,",
-        "answer": "4"
+        "option1": "comma ,",
+        "option2": "dot .",
+        "option3": "colon :",
+        "option4": "semicolon ;",
+        "answer": "1"
     },
     {
 
@@ -114,6 +114,7 @@ if (val.checked === false) {
 
 var i = 0;
 var correct = 0;
+var wrong = 0;
 var ans = document.getElementById("ans");
 function next() {
     var val = document.querySelector("input[name='option']:checked");
@@ -123,16 +124,29 @@ function next() {
     else {
         if (questions[i].answer === val.value) {
             correct++;
-            ans.innerHTML = "Right ";
+            ans.innerHTML = "Right";
         }
         else {
+            wrong++;
             ans.innerHTML = "Wrong";
         }
         if (questions.length - 1 === i) {
             var score = correct * 10;
             document.getElementById("quizContainer").style.display = "none";
             document.getElementById("resultContainer").style.display = "block";
-            document.getElementById("score").innerHTML = "Your score is " + score + "% ";
+            document.getElementById("score").innerHTML = "Your score is " + score + "%";
+            document.getElementById("correct").innerHTML = "Number of correct answers = "+correct;
+            document.getElementById("wrong").innerHTML = "Number of wrong answers = " + wrong;
+            var remarks = document.getElementById("remarks");
+            var scoreAns = document.getElementById("scoreAns");
+            if (score >= 60) {
+                scoreAns.className += " btn-success";
+                remarks.innerHTML = "Congratulations! You passed this quiz <i class='fa fa-child'></i>";
+            }
+            else if (score < 60){
+                scoreAns.className += " btn-danger";
+                remarks.innerHTML = "Bad! You are failed in this quiz &#9785;";
+            }
         }
         else {
             document.querySelector("input[name='option']:checked").checked = false;
@@ -162,7 +176,19 @@ function quizTimer() {
         var score = correct * 10;
         document.getElementById("quizContainer").style.display = "none";
         document.getElementById("resultContainer").style.display = "block";
-        document.getElementById("score").innerHTML = "Your score is " + score + " %";
+        document.getElementById("score").innerHTML = "Your score is " + score + "%";
+        document.getElementById("correct").innerHTML = "Number of correct answers = " + correct;
+        document.getElementById("wrong").innerHTML = "Number of wrong answers = " + wrong;
+        var remarks = document.getElementById("remarks");
+        var scoreAns = document.getElementById("scoreAns");
+        if (score >= 60) {
+            scoreAns.className += " btn-success";
+            remarks.innerHTML = "Congratulations! You passed this quiz <i class='fa fa-child'></i>";
+        }
+        else if (score < 60) {
+            scoreAns.className += " btn-danger";
+            remarks.innerHTML = "Bad! You are failed in this quiz &#9785";
+        }
     }
 }
 timer = setInterval(quizTimer, 1000);
