@@ -10,9 +10,9 @@ function submit() {
     localStorage.setItem("Password", password.value);
 
     if (name.value === "" && email.value === "" && password.value === "") {
-        alert("Please fill the form first");        
+        alert("Please fill the form first");
     }
-    else{
+    else {
         name.value = "";
         password.value = "";
         email.value = "";
@@ -20,29 +20,30 @@ function submit() {
         window.location = "login.html"
     }
 }
+
 function login() {
     var userEmail = document.getElementById("userEmail");
     var userPass = document.getElementById("userPassword");
     var storageEmail = localStorage.getItem("Email");
     var storagePass = localStorage.getItem("Password");
 
-    if(storageEmail === "" && storagePass === ""){
+    if (storageEmail === "" && storagePass === "") {
         alert("You're not signed-up");
         window.location = "index.html";
     }
-    else if(userEmail.value === storageEmail && userPass.value === storagePass) {
+    else if (userEmail.value === storageEmail && userPass.value === storagePass) {
         window.location = "profile.html";
     }
     else {
         alert("Incorrect Details");
     }
-    
-    
+
+
 }
 
 
 var name = localStorage.getItem("Name");
-document.getElementById("userProfile").innerHTML = "Welcome!  " + name; 
+document.getElementById("userProfile").innerHTML = "Welcome!  " + name;
 
 
 function logout() {
