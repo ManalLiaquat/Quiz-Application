@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
-<body id="body">
+<body id="body" onload="document.getElementById('name').focus();">
     <div class="container margin">
-        <h1 class="text-center ">REGISTRATION</h1><br>
+        <h1 class="text-center ">REGISTRATION</h1>
+        <br>
         <div class="row">
             <div class="col-md-6">
                 <label for="name" class="">Username:</label>
-                <input type="text" required="required" class="form-control" placeholder="e.g.   manalliaquat" id="name">
+                <input type="text" required="required" class="form-control" placeholder="e.g.   Muhammad Ali" id="name">
             </div>
             <div class="col-md-6">
                 <label for="number" class="">Number</label>
@@ -37,11 +38,13 @@
         </div>
         <div class="row">
             <div class="col">
-                <button class="btn btn-primary mb-2" onclick="submit();"><i class="fa fa-database"></i> SignUp</button>
+                <button class="btn btn-primary mb-2" onclick="submit();">
+                    <i class="fa fa-database"></i> SignUp</button>
             </div>
             <div class="col-xs-6">
                 <label for="" class="text-light">Already register?</label>
-                <button class="btn btn-success mb-2" onclick="window.location='login.html'"><i class="fa fa-sign-in"></i> Login</button>
+                <button class="btn btn-success mb-2" onclick="window.location='login.html'">
+                    <i class="fa fa-sign-in"></i> Login</button>
             </div>
         </div>
     </div>
